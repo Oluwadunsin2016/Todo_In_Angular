@@ -1,0 +1,78 @@
+<div class="container-fluid mx-auto">
+  <div class="row">
+    <div class="col-6 center text-center mt-4 shadow border-right">
+      <h1 class="w-100 text-center mb-4">Registration Form</h1>
+      <div>
+        <input
+          type="text"
+          name="FirstName"
+          [(ngModel)]="firstName"
+          placeholder="First Name"
+          id="FirstName"
+          class="form-control mb-2"
+          required
+          pattern="[a-zA-Z]{3,}"
+          title="First name must be atleast 3 letters"
+          autofocus
+        />
+
+        <input
+          type="text"
+          name="LastName"
+          [(ngModel)]="lastName"
+          placeholder="last Name"
+          id="LastName"
+          class="form-control mb-2"
+          pattern="[a-zA-Z]{3,}"
+          title="First name must be atleast 3 letters"
+          required
+        />
+
+        <input
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          placeholder="Email"
+          id="email"
+          class="form-control mb-2"
+          required
+          pattern="[a-zA-Z0-9]{3,}[@]{1}[a-z]{2,}[.]{1}[a-z]{2,4}"
+        />
+
+        <input
+          type="tel"
+          name="phone"
+          [(ngModel)]="phoneNumber"
+          placeholder="Phone Number"
+          id="phone"
+          class="form-control mb-2"
+          required
+          pattern="[0-9]{4}[0-9]{3}[0-9]{4}"
+          title="Your phone number format should be: #### ### ####"
+        />
+
+        <input
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          placeholder="Password"
+          id="password"
+          class="form-control mb-2"
+          pattern="[\w]"
+          required
+        />
+
+        <input
+          type="submit"
+          name=""
+          id=""
+          class="btn btn-success"
+          (click)="register()"
+        />
+        <p class="mt-2">
+          Already have an account? <a routerLink="/login">Sign In here</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

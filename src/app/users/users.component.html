@@ -1,0 +1,23 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-8 text-white mx-auto">
+    <table class="table table-bordered table-striped">
+    <thead>
+    <tr class="text-center bg-dark text-white">
+    <th>S/N</th>
+    <th>Name</th>
+    <th>View</th>
+    </tr>
+    </thead>
+
+    <tbody *ngFor="let ind=index; let user of usersArray">
+    <tr>
+    <td>{{ind+1}}</td>
+    <td>{{user.name}}</td>
+    <th><button class="btn btn-info" [routerLink]="'todo/'+user.id">View</button></th>
+    </tr>
+    </tbody>
+    </table>
+    </div>
+  </div>
+</div>

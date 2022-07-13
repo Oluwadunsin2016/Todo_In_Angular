@@ -1,0 +1,50 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-6 mx-auto shadow">
+      <table class="table table-bordered col-6">
+        <thead>
+          <tr class="text-center bg-primary text-white">
+            <th colspan="2"><h4>Todo Details</h4></th>
+          </tr>
+        </thead>
+        <tbody *ngFor="let todo of todoDetails">
+          <tr>
+            <th>Name:</th>
+            <td>{{ todo.todo }}</td>
+          </tr>
+          <tr>
+            <th>Description:</th>
+            <td>{{ todo.Description }}</td>
+          </tr>
+          <tr>
+            <th>Time:</th>
+            <td>{{ todo.Times }}</td>
+          </tr>
+          <tr>
+            <th>Date:</th>
+            <td>{{ todo.Date }}</td>
+          </tr>
+          <tr>
+            <th>Time_Added:</th>
+            <td>{{ todo.time }}</td>
+          </tr>
+          <tr>
+            <th>Date_Added:</th>
+            <td>{{ todo.dates }}</td>
+          </tr>
+
+          <tr>
+            <th></th>
+            <td>
+              <button mat-raised-button class="btn btn-warning mx-4" (click)="edit(i)">
+                Edit</button
+              ><button class="btn btn-danger mx-4" (click)="delete(i)">
+                Delete
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
